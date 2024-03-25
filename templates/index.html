@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+<body class="bg-cover">
+  <main>
+<div class="content-container">
+<section >
+  <div class="text-center">
+      <div>
+        <h1 class="display-4 mt-3 mb-2" style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;font-weight: bold; font-size: 55px;color: #26ff43;">WELCOME TO THE FUTURE</h1>
+        <img src="{{ url_for('static', filename='img/logo.png') }}"  class="img-fluid mb-3" style="max-height: 250px;">
+        <h2 class="mt-2 mb-3" style="font-family: 'Footlight MT Light', sans-serif;font-weight: bold; font-size: 55px;color: rgb(173, 22, 22);">AGROSYN</h2>
+          <p style="font-family: 'Garamond', serif; font-weight: bold; font-size: 25px; color: #f1f4f1;">
+            Where Farming meets AI, Crop Care, Fertilization, and Pest Control. We're dedicated to nurturing the vitality of your soil. At AGROSYN, we deeply respect the passion, resilience, and spirit of the Indian Farmer. They are the lifeblood of a nation of nearly 1.4 billion souls, providing sustenance and nourishment to all. Yet, their toil is often imperiled by the capricious whims of nature, threatening their crops and livelihoods.Enter AGROSYN, a pioneering force in agricultural innovation. We're here to empower farmers with smart solutions tailored to their fields, harnessing the power of data and technology to optimize yields and safeguard against adversity. Join us on this journey towards a bountiful harvest and a flourishing future.
+            </p>
+      </div>
+    </div>
+    
+  </section>
+  
+  <div>
+    <div class="container"  id="main">
+      <section class="tm-section tm-section-margin-bottom-0 row">
+        <div>
+          <h2 style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;font-weight: bold; font-size: 45px;color:orangered;text-align: center;">EXPLORE OUR SERVICES</h2>
+          
+        </div>
+        <div class="col-lg-12 tm-popular-items-container">
+          <div class="tm-popular-item">
+            <img src="{{ url_for('static', filename='img/cropbg.png') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <div class="tm-popular-item-description">
+              <h4 style="font-family: 'Footlight MT Light', sans-serif;font-size: 35px;color:rgb(11, 94, 23)">
+                CROP NEXUS</h4>
+                <hr class="tm-popular-item-hr">
+              <p style="font-family: 'Garamond', serif;font-size: 20px;">Unlock the future of farming! Let our advanced algorithms determine the optimal crop for your unique conditions. Make enlightened choices before sowing the seeds of tomorrow's harvest.</p>
+              <br><br><br><br>
+              <div class="order-now-container">
+                <a href="CropRecommendation.html" style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;  font-size: 35px;color:#e37d16">Let's Go!</a>
+              </div>
+            </div>
+          </div>
+          <div class="tm-popular-item">
+            <img src="{{ url_for('static', filename='img/fert.png') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <div class="tm-popular-item-description">
+              <h4 style="font-family: 'Footlight MT Light', sans-serif;font-size: 35px;color:rgb(11, 94, 23)">
+                FERTILIZER SYSTEM</h4>
+              <hr class="tm-popular-item-hr">
+              <p style="font-family: 'Garamond', serif;font-size: 20px;">Elevate your soil to new heights! Our state-of-the-art NutriSynth technology customizes the perfect blend of nutrients for your crops, ensuring maximum yield and sustainability.</p>
+              <br><br><br>
+              <div class="order-now-container">
+                <a href="FertilizerRecommendation.html" style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;  font-size: 35px;color:#e37d16">Let's Go!</a>
+              </div>
+            </div>
+          </div>
+          <div class="tm-popular-item">
+            <img src="{{ url_for('static', filename='img/pst.png') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <div class="tm-popular-item-description">
+              <h4 style="font-family: 'Footlight MT Light', sans-serif;font-size: 35px;color:rgb(11, 94, 23)">
+                BIOSHEILD PEST DEFENSE</h4>
+              <hr class="tm-popular-item-hr">
+              <p style="font-family: 'Garamond', serif;font-size: 20px;">Defend your harvest against the forces of nature! Utilize our BioShield system to identify and neutralize pests before they wreak havoc on your crops. Embrace the future of pest control and safeguard your agricultural empire.</p>
+              <div class="order-now-container">
+                <a href="PesticideRecommendation.html" style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;  font-size: 35px;color:#e37d16">Let's Go!</a>
+              </div>
+            </div>
+          </div>
+          <div class="tm-popular-item">
+            <img src="{{ url_for('static', filename='img/cropdis.png') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <div class="tm-popular-item-description">
+              <h4 style="font-family: 'Footlight MT Light', sans-serif;font-size: 35px;color:rgb(11, 94, 23)">
+                DISEASE DETECTION</h4>
+                <hr class="tm-popular-item-hr">
+              <p style="font-family: 'Garamond', serif;font-size: 20px;">Anticipate and identify crop diseases, providing personalized suggestions for effective treatment and prevention strategies based on specific crop types and environmental factors.</p>
+              <br><br><br>
+              <div class="order-now-container">
+                <a href="PesticideRecommendation.html" style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;  font-size: 35px;color:#e37d16">Let's Go!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+</body>
+
+
+{% endblock %}

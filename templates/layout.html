@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGROSYN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Perpetua+Titling+MT&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Felix+Titling&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Footlight+MT+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Engravers+MT&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet'
+    type='text/css'>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon" />
+  <script type="text/JavaScript" src="{{ url_for('static', filename='js/cities.js') }}"></script>
+</head>
+
+
+<body>
+  <main>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Preloader -->
+  <div class="tm-top-header" style="background-color: #FF0000; text-align: center;">
+    <div class="container">
+      <div class="row">
+        <div class="tm-top-header-inner">
+          <div class="tm-logo-container">
+            <h1 class="tm-site-name" style="font-family: 'Perpetua Titling MT', serif; color: rgb(233, 184, 25);font-size: 70px;">
+              AGROSYN
+            </h1>
+          </div>
+          <div class="mobile-menu-icon">
+            <i class="fa fa-bars"></i>
+          </div>
+          <nav class="tm-nav" {% if not show_nav %}style="display: none;"{% endif %}>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="nav-button">Home</a></li>
+                    <li><a href="{{ url_for('crop') }}" class="nav-button">Crop</a></li>
+                    <li><a href="{{ url_for('fertilizer') }}" class="nav-button">Fertilizer</a></li>
+                    <li><a href="{{ url_for('pesticide') }}" class="nav-button">Pesticide</a></li>
+                    <li><a href="{{ url_for('disease_prediction') }}" class="nav-button">Disease</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="nav-button">Logout</a></li>
+                </ul>
+        </nav>               
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  {% block body %}
+  
+  {% endblock %}
+</main>
+  <!-- JS -->
+  <footer class="text-center py-2" style="background-color: #FF5F1F;"> <!-- Adjust the padding here -->
+		<div class="container py-md-2"> <!-- Adjust the padding here -->
+			
+			<div class="w3l-copy text-center">
+				<p class="text-da" style="font-family: 'Engravers MT', serif; font-style: italic; font-size: 20px; font-weight: bold;color:#fcc603">
+					AGROSYN<br>
+				</p>
+			</div>
+			<div class="w3l-copy text-center">
+				<p class="text-da" style="font-family: 'Engravers MT', serif; font-style: italic; font-size: 16px; font-weight: bold;color:#fcc603">
+					SRM MAJOR PROJECT 2024<br>
+				</p>
+			</div>
+      <div class="w3l-copy text-center">
+				<p class="text-da" style="font-family: 'Engravers MT', serif; font-style: italic; font-size: 20px; font-weight: bold;color:#fcc603">
+					Dr. JOSEPH RAYMOND V SIR<br>
+				</p>
+			</div>
+			<!-- //logo -->
+			<!-- address -->
+			<div class="contact-left-footer mt-2">
+				<div class="w3l-copy text-center">
+					<p class="text-da" style="font-family: 'Engravers MT', serif; font-style: italic;font-size: 14px;  font-weight: bold;color:#fcc603">
+						DEVELOPED BY KRANTI AJIT x VIKRAM x VIJAY<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+  
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script> <!-- jQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script> <!-- Templatemo Script -->
+  
+</body>
+
+</html>

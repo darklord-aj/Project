@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body class="login-page-background">
+<main>
+<div class="signup-page">
+    <div class="form">
+        <form class="signup-form" action="{{ url_for('signup') }}" method="post">
+            <input type="text" placeholder="First Name" name="first_name" required/>
+            <input type="text" placeholder="Last Name" name="last_name" required/>
+            <input type="email" placeholder="Email" name="email" required/>
+            <input type="password" placeholder="password" name="password" required/>
+            <button type="submit">Create Account</button>
+            <p class="message">Already registered? <a href="{{ url_for('login') }}">Log in</a></p>
+        </form>
+    </div>
+</div>
+</main>
+</body>
+{% endblock %}

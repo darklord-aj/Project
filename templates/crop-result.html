@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+
+
+
+
+{% block body %}
+<body class="cropres-page-background">
+<h1 class="text-center" style="margin-top:5%;">
+    <b style="font-family: 'Footlight MT Light', sans-serif;font-weight: bold; font-size: 55px;color: maroon;text-align: center;">YOU SHOULD GROW <i style="color:rgb(7, 209, 255)"> {{ prediction }} </i> IN YOUR FARM!</b>
+    <br><br>
+    <img src="{{url_for('static',filename=pred)}}" width="780px" height="450px" alt={{prediction}}>
+</h1>
+</body>
+{% endblock %}

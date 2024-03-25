@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+<body class="pesticide-page-background">
+<main>
+<h1 style="font-family: 'Footlight MT Light', sans-serif;font-weight: bold; font-size: 55px;color: rgb(255, 3, 217);text-align: center;">SEEKING PEST SOLUTIONS?</h1>
+<h2 style="font-family: 'Footlight MT Light', sans-serif;font-style: italic;font-weight: bold; font-size: 35px;color: rgb(125, 251, 79);text-align: center;">Snap a pic of the pesky intruder and let us do the rest! We'll match you with the perfect pesticide to vanquish those unwanted guests from your garden</h3>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+<div class="form-container">
+  <section>
+    <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+      <input type="file" name="image" id="file-upload" class="upload" style="font-size: 15px; display: none;">
+      <label for="file-upload" class="custom-file-upload">
+        UPLOAD
+      </label>
+      <br>
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Predict" style="font-family:'Perpetua Titling MT',sans-serif; color: #14dce3; font-weight: bold;
+      background-color: #db1c1c;
+      width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+    </form>
+  </section>
+</div>
+
+</div>
+</div>
+</main>
+</body>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<body class="fertilizer-page-background">
+<main>
+
+<h1 style="font-family: 'Footlight MT Light', sans-serif;font-weight: bold; font-size: 55px;color: maroon;text-align: center;">Unlock Fertilizer Insights Tailored To Your Soil's Needs</h1>
+
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{url_for('fertilizer_recommend')}}">
+    <div class="form-group">
+      <label for="Nitrogen"><b style="font-size: 16px; font-family:'Perpetua Titling MT',sans-serif;font-weight:bold;color:#1c008b"> Nitrogen Ratio:</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Nitrogen"
+        name="nitrogen"
+        max="100"
+        min="0"
+        placeholder="Enter Value [example:50]"
+        style="font-weight: bold;font-family:'Perpetua Titling MT',sans-serif;"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Phosphorous""
+        ><b style="font-size: 16px; font-family:'Perpetua Titling MT',sans-serif;font-weight:bold;color:#1c008b">Phosphorous Ratio:</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="Phosphorous"
+        name="phosphorous"
+        max="100"
+        min="0"
+        placeholder="Enter Value [example:50]"
+        style="font-weight: bold;font-family:'Perpetua Titling MT',sans-serif;"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Potassium"><b style="font-size: 16px; font-family:'Perpetua Titling MT',sans-serif;font-weight:bold;color:#1c008b">Potassium Ratio:</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Potassium"
+        name="potassium"
+        max="100"
+        min="0"
+        placeholder="Enter Value [example:50]"
+        style="font-weight: bold;font-family:'Perpetua Titling MT',sans-serif;"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="crop"
+        ><b style="font-size: 16px; font-family:'Perpetua Titling MT',sans-serif;font-weight:bold;color:#1c008b"> Crop of Interest:</b></label>
+      <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        placeholder="Select Crop Name"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>apple</option>
+        <option>banana</option>
+        <option>blackgram</option>
+        <option>chickpea</option>
+        <option>coconut</option>
+        <option>coffee</option>
+        <option>cotton</option>
+        <option>grapes</option>
+        <option>groundnut</option>
+        <option>jute</option>
+        <option>kidneybeans</option>
+        <option>lentil</option>
+        <option>maize</option>
+        <option>mango</option>
+        <option>mothbeans</option>
+        <option>mungbean</option>
+        <option>muskmelon</option>
+        <option>mustard</option>
+        <option>orange</option>
+        <option>paddy</option>
+        <option>papaya</option>
+        <option>pearlmillet</option>
+        <option>pigeonpea</option>
+        <option>pomegranate</option>
+        <option>rapeseed</option>
+        <option>rice</option>
+        <option>sorghum</option>
+        <option>sugarcane</option>
+        <option>watermelon</option>
+        <option>wheat</option>
+      </select>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      <button type="submit"
+      style="font-family:'Perpetua Titling MT',sans-serif; color: #14dce3; font-weight: bold;
+      background-color: #db1c1c;
+      width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+</main>
+</body>
+{% endblock %}

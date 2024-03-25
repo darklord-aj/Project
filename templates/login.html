@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body class="login-page-background">
+<main>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" action="{{ url_for('login') }}" method="post">
+            <input type="email" placeholder="Email" name="email" required/>
+            <input type="password" placeholder="password" name="password" required/>
+            <button type="submit">login</button>
+            <p class="message">Not registered? <a href="{{ url_for('signup') }}">Create an account</a></p>
+        </form>
+    </div>
+</div>
+</main>
+</body>
+{% endblock %}
